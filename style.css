@@ -1,0 +1,42 @@
+
+    :root{
+      --brand: #6C63FF; /* indigo */
+      --brand-2: #00C2A8; /* teal */
+      --dark: #0f172a;
+    }
+    html{scroll-behavior:smooth}
+    body{font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";}
+    .navbar{backdrop-filter:saturate(180%) blur(8px);}
+    .navbar-brand b{color:var(--brand)}
+    .btn-brand{background:var(--brand); color:#fff; border:none}
+    .btn-brand:hover{background:#584fff; color:#fff}
+    .btn-outline-brand{border-color:var(--brand); color:var(--brand)}
+    .btn-outline-brand:hover{background:var(--brand); color:#fff}
+    .hero{
+      position:relative; color:#fff; overflow:hidden; background:#0b1020;
+      min-height:80vh; display:grid; place-items:center;
+    }
+    .hero:before{ /* gradient blob */
+      content:""; position:absolute; inset:-20% -10% -10% -10%;
+      background: radial-gradient(60% 60% at 20% 20%, rgba(108,99,255,.5), transparent 60%),
+                 radial-gradient(60% 60% at 80% 40%, rgba(0,194,168,.5), transparent 60%),
+                 radial-gradient(50% 50% at 50% 90%, rgba(255,255,255,.06), transparent 60%);
+      filter: blur(30px); z-index:0;
+    }
+    .hero .container{position:relative; z-index:1}
+    .section-title .bar{width:72px; height:4px; background:linear-gradient(90deg, var(--brand), var(--brand-2)); border-radius:4px}
+    .card{border: 1px solid rgba(0,0,0,.06)}
+    .icon-circle{width:56px; height:56px; border-radius:100%; display:grid; place-items:center; background:rgba(108,99,255,.1); color:var(--brand)}
+    .bg-soft{background:linear-gradient(180deg, rgba(108,99,255,.06), rgba(0,194,168,.06))}
+    .timeline{position:relative; padding-left:2rem}
+    .timeline:before{content:""; position:absolute; left:0.9rem; top:0; bottom:0; width:2px; background:linear-gradient(180deg, var(--brand), var(--brand-2))}
+    .timeline .dot{width:14px; height:14px; border-radius:50%; background:var(--brand); outline:3px solid #fff; box-shadow:0 0 0 2px var(--brand-2)}
+    .portfolio-img{border-radius:1rem; width:100%; aspect-ratio:16/10; object-fit:cover; background:#111}
+    .fav-badge{background:rgba(15,23,42,.06); border:1px solid rgba(15,23,42,.08)}
+    .tooltip-demo [data-bs-toggle="tooltip"]{border-bottom:1px dashed currentColor; cursor:help}
+    .footer{background:#0b1020; color:#cbd5e1}
+    .footer a{color:#e2e8f0}
+    /* Tiny CSS drawing demo for bonus */
+    .css-badge{position:relative; width:72px; height:72px; border-radius:18px; background:linear-gradient(135deg, var(--brand), var(--brand-2)); box-shadow:0 10px 24px rgba(0,0,0,.15)}
+    .css-badge:before{content:"</>"; color:#fff; font-weight:700; position:absolute; inset:0; display:grid; place-items:center}
+  
